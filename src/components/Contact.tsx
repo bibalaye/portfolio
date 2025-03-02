@@ -78,8 +78,8 @@ export default function Contact() {
             Contactez Moi
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 mx-auto mb-6 rounded-full"></div>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Vous avez un projet en tête ou une question ? N'hésitez pas à me contacter. Je suis toujours ouvert à discuter de nouvelles opportunités.
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            N&apos;hésitez pas à me contacter pour discuter de vos projets ou opportunités de collaboration.
           </p>
         </motion.div>
 

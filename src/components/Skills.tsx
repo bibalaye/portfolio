@@ -144,7 +144,7 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Note pour les icônes */}
+        {/* Note pour les icônes 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -158,6 +158,7 @@ export default function Skills() {
             pour chaque catégorie et compétence (exemple : <code className="bg-yellow-100 dark:bg-yellow-900/50 px-1 py-0.5 rounded text-xs font-mono">frontend.png</code>, <code className="bg-yellow-100 dark:bg-yellow-900/50 px-1 py-0.5 rounded text-xs font-mono">react.png</code>).
           </p>
         </motion.div>
+        */}
       </div>
     </section>
   );

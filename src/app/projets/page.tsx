@@ -184,7 +184,7 @@ export default function AllProjects() {
             <div className="text-gray-600 dark:text-gray-400">
               {filteredProjects.length} projet{filteredProjects.length !== 1 ? 's' : ''} trouvé{filteredProjects.length !== 1 ? 's' : ''}
               {selectedTechnology && <span> pour <span className="font-medium text-indigo-600 dark:text-indigo-400">{selectedTechnology}</span></span>}
-              {searchQuery && <span> contenant <span className="font-medium text-indigo-600 dark:text-indigo-400">"{searchQuery}"</span></span>}
+              {searchQuery && <span> contenant <span className="font-medium text-indigo-600 dark:text-indigo-400">&apos;{searchQuery}&apos;</span></span>}
             </div>
             
             {(selectedTechnology || searchQuery) && (
@@ -441,7 +441,7 @@ export default function AllProjects() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
               </svg>
-              Retour à l'accueil
+              Retour à l&apos;accueil
             </Link>
           </div>
         </div>

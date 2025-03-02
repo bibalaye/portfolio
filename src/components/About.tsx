@@ -123,8 +123,7 @@ export default function About() {
           className="mt-16 bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800/50 text-sm text-yellow-800 dark:text-yellow-200"
         >
           <p>
-            <span className="font-bold">Note:</span> Toutes les images ne sont pas encore disponible. 
-            Assurez-vous de placer vos images projet dans le dossier <code className="bg-yellow-100 dark:bg-yellow-900/50 px-1 py-0.5 rounded text-xs font-mono">/public/</code>.
+            <span className="font-bold">Note:</span> Toutes les images ne sont pas encore disponible.
           </p>
         </motion.div>
       </div>

@@ -19,7 +19,7 @@ export default function Experience() {
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 mx-auto mb-6 rounded-full"></div>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Découvrez mon parcours professionnel et les compétences que j'ai développées à travers diverses expériences.
+            Découvrez mon parcours professionnel et mes expériences dans le développement et la gestion de projets.
           </p>
         </motion.div>
 

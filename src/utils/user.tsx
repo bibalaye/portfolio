@@ -1,6 +1,6 @@
 const Info = {
     name: "Abiboulaye Sy",
-    email: "contact@abiboulaye.dev",
+    email: "sybibalaye@gmail.com",
     stack: ["Étudiant en Master MIAGE", "Développeur Full Stack", "Gestionnaire", "Passionné d'Informatique"],
     bio: "Bienvenue dans mon univers numérique ! 🚀 Je suis ABIBOULAYE SY, étudiant passionné en Master MIAGE à l'UGB, alliant expertise technique et compétences en gestion. Spécialisé dans la création de solutions innovantes et évolutives, je relève avec enthousiasme les défis du développement et de la gestion de projets. Toujours en quête de nouvelles opportunités, je suis prêt à mettre mes compétences au service de projets ambitieux. Explorez mon portfolio pour découvrir mes réalisations et n'hésitez pas à me contacter pour des opportunités d'emploi ou de stage. Ensemble, créons l'exceptionnel et façonnons l'avenir numérique ! 💼🚀",
     github: "https://github.com/bibalaye",

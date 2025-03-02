@@ -1,12 +1,10 @@
-import Image from "next/image";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Projects from "../components/Projects";
-import Skills from "../components/Skills";
-import Experience from "../components/Experience";
-import Contact from "../components/Contact";
-import Navbar from "../components/Navbar";
-import { motion } from "framer-motion";
+import About from '@/components/About';
+import Contact from '@/components/Contact';
+import Experience from '@/components/Experience';
+import Hero from '@/components/Hero';
+import Projects from '@/components/Projects';
+import Skills from '@/components/Skills';
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export default function Home() {
@@ -17,7 +15,7 @@ export default function Home() {
       {/* Indicateur de défilement */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-40 hidden md:block">
         <div className="flex flex-col gap-3">
-          {["hero", "about", "skills", "experience", "projects", "contact"].map((section, index) => (
+          {["hero", "about", "skills", "experience", "projects", "contact"].map((section) => (
             <Link href={`/#${section === "hero" ? "" : section}`} key={section} scroll={true}>
               <div className="group flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 group-hover:bg-indigo-500 dark:group-hover:bg-indigo-400 transition-colors duration-300"></div>
@@ -41,36 +39,13 @@ export default function Home() {
         </Link>
       </div>
       
-      <main className="flex flex-col">
-        {/* Hero section with introduction */}
-        <section id="hero">
-          <Hero />
-        </section>
-        
-        {/* About section with bio */}
-        <section id="about">
-          <About />
-        </section>
-        
-        {/* Skills and technologies */}
-        <section id="skills">
-          <Skills />
-        </section>
-        
-        {/* Experience */}
-        <section id="experience">
-          <Experience />
-        </section>
-        
-        {/* Projects showcase */}
-        <section id="projects">
-          <Projects />
-        </section>
-        
-        {/* Contact form and information */}
-        <section id="contact">
-          <Contact />
-        </section>
+      <main className="relative">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
       </main>
       
       {/* Navigation rapide entre sections */}
@@ -100,7 +75,7 @@ export default function Home() {
       <footer className="py-8 mt-12 border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} Portfolio d'Abiboulaye Sy. Tous droits réservés.
+            © {new Date().getFullYear()} Portfolio d&apos;Abiboulaye Sy. Tous droits réservés.
           </p>
           <div className="flex gap-6">
             <a 
@@ -126,7 +101,7 @@ export default function Home() {
               </svg>
             </a>
             <a 
-              href="mailto:contact@abiboulaye.dev" 
+              href="mailto:sybibalaye@gmail.com" 
               className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors duration-300"
             >
               <span className="sr-only">Email</span>
