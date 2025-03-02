@@ -123,7 +123,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-800 dark:text-white">Téléphone</h3>
-                  <p className="text-gray-600 dark:text-gray-300">+33 6 12 34 56 78</p>
+                  <p className="text-gray-600 dark:text-gray-300">+221 778649872</p>
                 </div>
               </div>
             </motion.div>
