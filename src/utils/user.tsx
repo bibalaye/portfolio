@@ -36,7 +36,7 @@ const ProjectInfo = [
         desc: "Application mobile complète pour la commande et le paiement des repas dans une cantine universitaire. Conçue avec Flutter et intégrant les services de paiement mobile Wave et Orange Money via l'API PayDunya, elle permet une gestion fluide des menus, commandes et transactions, tout en offrant une expérience utilisateur moderne et responsive avec Material Design 3.",
         image: "restocampus.png",
         images: ["restocampus.png", "restocampus1.png", "restocampus2.png", "restocampus3.png", "restocampus4.png", "restocampus5.png", "restocampus6.png", "restocampus7.png","restocampus8.png"],
-        live: false,
+        live: true,
         technologies: ["Flutter", "Dart", "Material Design 3", "PayDunya API", "Wave", "Orange Money"],
         link: "https://appdistribution.firebase.dev/i/5531e034bd2b8709",
         github: "https://github.com/bibalaye/resto_campus"
@@ -257,6 +257,20 @@ const ExperienceInfo = [
         date: "Mars 2022 - Avril 2022",
         desc: "Durant mon stage au Centre de Calcul Ousmane Seck de l'UGB, j'ai participé à la maintenance des équipements informatiques et au support utilisateur. J'ai également contribué à l'amélioration de l'infrastructure réseau et à la mise en place de nouvelles solutions technologiques. Cette expérience m'a permis de développer mes compétences en support technique et en gestion d'infrastructure IT.",
         skills: ["Support technique", "Maintenance informatique", "Gestion de réseau", "Résolution de problèmes", "Communication"]
+    },
+    {
+        role: "Data Scientist",
+        company: "Freelance",
+        date: "2023 - Présent",
+        desc: "En tant que data scientist, j'ai développé des compétences en analyse de données, en machine learning et en intelligence artificielle. Je suis capable de traiter des données complexes et de les utiliser pour prendre des décisions éclairées. Cette expérience m'a permis de renforcer mes compétences en science des données et de mettre en pratique mes connaissances théoriques.",
+        skills: ["Data Science", "Machine Learning", "AI", "Data Visualization", "Big Data"]
+    },
+    {
+        role: "Stagiaire Développeur Full Stack",
+        company: "challenge Hub",
+        date: "2024 - 2025",
+        desc: "Durant mon stage au challenge Hub, j'ai développé des compétences en développement web full stack. J'ai travaillé sur des projets de bout en bout (yonnutool voir section projets), en utilisant les technologies modernes du web. Cette expérience m'a permis de renforcer mes compétences en développement web et de mettre en pratique mes connaissances théoriques.",
+        skills: ["React", "Node.js", "Laravel", "MySQL", "Git", "Gestion de projet", "Communication client"]
     }
 ]
 
