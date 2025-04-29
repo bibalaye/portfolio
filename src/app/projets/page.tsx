@@ -67,7 +67,7 @@ export default function AllProjects() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950">
       <Navbar />
       
       <div className="pt-24 pb-20">
@@ -77,7 +77,7 @@ export default function AllProjects() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 bg-clip-text text-transparent"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-blue-300 bg-clip-text text-transparent"
             >
               Portfolio de Projets
             </motion.h1>
@@ -85,13 +85,13 @@ export default function AllProjects() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-32 h-2 bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 mx-auto mb-6 rounded-full"
+              className="w-32 h-2 bg-gradient-to-r from-indigo-400 to-blue-300 mx-auto mb-6 rounded-full"
             ></motion.div>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+              className="text-lg text-gray-300 max-w-3xl mx-auto"
             >
               Explorez mes réalisations et découvrez mes compétences techniques à travers ces projets variés. 
               Utilisez les filtres pour trouver les technologies qui vous intéressent.
@@ -103,14 +103,14 @@ export default function AllProjects() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mb-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700"
+            className="mb-8 bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700"
           >
             <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
               <div className="w-full md:w-1/3 relative">
                 <input 
                   type="text" 
                   placeholder="Rechercher un projet..." 
-                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent shadow-sm text-gray-700 dark:text-gray-300"
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-transparent shadow-sm text-gray-300"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -122,10 +122,10 @@ export default function AllProjects() {
               </div>
 
               <div className="flex items-center gap-4">
-                <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">Affichage :</span>
-                <div className="flex bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
+                <span className="text-gray-300 text-sm font-medium">Affichage :</span>
+                <div className="flex bg-gray-700 rounded-lg p-1">
                   <button 
-                    className={`p-2 rounded-md transition-colors duration-300 ${isGridView ? 'bg-white dark:bg-gray-600 shadow-sm' : 'text-gray-500 dark:text-gray-400'}`}
+                    className={`p-2 rounded-md transition-colors duration-300 ${isGridView ? 'bg-gray-600 shadow-sm' : 'text-gray-400'}`}
                     onClick={() => setIsGridView(true)}
                     aria-label="Vue en grille"
                     title="Vue en grille"
@@ -135,7 +135,7 @@ export default function AllProjects() {
                     </svg>
                   </button>
                   <button 
-                    className={`p-2 rounded-md transition-colors duration-300 ${!isGridView ? 'bg-white dark:bg-gray-600 shadow-sm' : 'text-gray-500 dark:text-gray-400'}`}
+                    className={`p-2 rounded-md transition-colors duration-300 ${!isGridView ? 'bg-gray-600 shadow-sm' : 'text-gray-400'}`}
                     onClick={() => setIsGridView(false)}
                     aria-label="Vue en liste"
                     title="Vue en liste"
@@ -149,13 +149,13 @@ export default function AllProjects() {
             </div>
             
             <div className="mt-6">
-              <div className="text-gray-700 dark:text-gray-300 text-sm font-medium mb-3">Filtrer par technologie :</div>
+              <div className="text-gray-300 text-sm font-medium mb-3">Filtrer par technologie :</div>
               <div className="flex flex-wrap gap-2">
                 <button 
                   className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                     selectedTechnology === null
                     ? 'bg-indigo-600 text-white shadow-md'
-                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
                   onClick={() => setSelectedTechnology(null)}
                 >
@@ -168,7 +168,7 @@ export default function AllProjects() {
                     className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                       selectedTechnology === tech
                       ? 'bg-indigo-600 text-white shadow-md'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     }`}
                     onClick={() => setSelectedTechnology(tech)}
                   >
@@ -181,10 +181,10 @@ export default function AllProjects() {
 
           {/* Résumé des filtres */}
           <div className="mb-6 flex justify-between items-center">
-            <div className="text-gray-600 dark:text-gray-400">
+            <div className="text-gray-400">
               {filteredProjects.length} projet{filteredProjects.length !== 1 ? 's' : ''} trouvé{filteredProjects.length !== 1 ? 's' : ''}
-              {selectedTechnology && <span> pour <span className="font-medium text-indigo-600 dark:text-indigo-400">{selectedTechnology}</span></span>}
-              {searchQuery && <span> contenant <span className="font-medium text-indigo-600 dark:text-indigo-400">&apos;{searchQuery}&apos;</span></span>}
+              {selectedTechnology && <span> pour <span className="font-medium text-indigo-400">{selectedTechnology}</span></span>}
+              {searchQuery && <span> contenant <span className="font-medium text-indigo-400">&apos;{searchQuery}&apos;</span></span>}
             </div>
             
             {(selectedTechnology || searchQuery) && (
@@ -193,7 +193,7 @@ export default function AllProjects() {
                   setSelectedTechnology(null);
                   setSearchQuery('');
                 }}
-                className="text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 flex items-center gap-1"
+                className="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
               >
                 <span>Réinitialiser les filtres</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -212,13 +212,13 @@ export default function AllProjects() {
                 transition={{ duration: 0.5 }}
                 className="text-center py-20"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg max-w-md mx-auto">
+                <div className="bg-gray-800 rounded-xl p-8 shadow-lg max-w-md mx-auto">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-400 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M12 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Aucun projet trouvé</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">Essayez de modifier vos critères de recherche ou de sélectionner une autre technologie.</p>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Aucun projet trouvé</h3>
+                  <p className="text-gray-600 mb-4">Essayez de modifier vos critères de recherche ou de sélectionner une autre technologie.</p>
                   <button 
                     onClick={() => {
                       setSelectedTechnology(null);
@@ -252,7 +252,7 @@ export default function AllProjects() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.5, delay: index * 0.1 }}
                           whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                          className="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700 h-full flex flex-col group"
+                          className="bg-gray-800 rounded-xl shadow-xl overflow-hidden border border-gray-700 h-full flex flex-col group"
                         >
                           <div className="relative h-52 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -271,20 +271,20 @@ export default function AllProjects() {
                           </div>
                           
                           <div className="p-6 flex-grow flex flex-col">
-                            <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">{project.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 flex-grow">{project.desc}</p>
+                            <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">{project.title}</h3>
+                            <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">{project.desc}</p>
                             
                             <div className="flex flex-wrap gap-2 mb-6">
                               {project.technologies.slice(0, 3).map((tech, techIndex) => (
                                 <span 
                                   key={`${tech}-${techIndex}`} 
-                                  className="px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-300 rounded-full"
+                                  className="px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full"
                                 >
                                   {tech}
                                 </span>
                               ))}
                               {project.technologies.length > 3 && (
-                                <span className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 rounded-full">
+                                <span className="px-2 py-1 text-xs font-medium bg-gray-700 text-gray-300 rounded-full">
                                   +{project.technologies.length - 3}
                                 </span>
                               )}
@@ -315,7 +315,7 @@ export default function AllProjects() {
                           initial={{ opacity: 0, x: -30 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5, delay: index * 0.1 }}
-                          className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 group hover:shadow-xl transition-shadow duration-300"
+                          className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700 group hover:shadow-xl transition-shadow duration-300"
                         >
                           <div className="flex flex-col md:flex-row">
                             <div className="md:w-1/4 relative">
@@ -334,14 +334,14 @@ export default function AllProjects() {
                             </div>
                             
                             <div className="p-6 md:w-3/4">
-                              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">{project.title}</h3>
-                              <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">{project.desc}</p>
+                              <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">{project.title}</h3>
+                              <p className="text-gray-600 mb-4 line-clamp-2">{project.desc}</p>
                               
                               <div className="flex flex-wrap gap-2 mb-4">
                                 {project.technologies.map((tech, techIndex) => (
                                   <span 
                                     key={`${tech}-${techIndex}`} 
-                                    className="px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-300 rounded-full"
+                                    className="px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full"
                                   >
                                     {tech}
                                   </span>
@@ -363,7 +363,7 @@ export default function AllProjects() {
                                   href={project.github}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-indigo-600 hover:text-indigo-600 dark:hover:border-indigo-400 dark:hover:text-indigo-400 font-medium rounded-lg transition-all duration-300 inline-flex items-center"
+                                  className="px-4 py-2 border border-gray-700 text-gray-300 hover:border-indigo-600 hover:text-indigo-600 font-medium rounded-lg transition-all duration-300 inline-flex items-center"
                                 >
                                   <span>GitHub</span>
                                   <svg className="h-4 w-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -388,8 +388,8 @@ export default function AllProjects() {
                         disabled={currentPage === 1}
                         className={`p-2 rounded-lg transition-colors duration-300 ${
                           currentPage === 1 
-                            ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed' 
-                            : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30'
+                            ? 'bg-gray-700 text-gray-400 cursor-not-allowed' 
+                            : 'bg-gray-800 text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30'
                         }`}
                         aria-label="Page précédente"
                         title="Page précédente"
@@ -406,7 +406,7 @@ export default function AllProjects() {
                           className={`w-10 h-10 rounded-lg transition-colors duration-300 ${
                             currentPage === number
                               ? 'bg-indigo-600 text-white font-medium'
-                              : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30'
+                              : 'bg-gray-800 text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30'
                           }`}
                         >
                           {number}
@@ -418,8 +418,8 @@ export default function AllProjects() {
                         disabled={currentPage === totalPages}
                         className={`p-2 rounded-lg transition-colors duration-300 ${
                           currentPage === totalPages 
-                            ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed' 
-                            : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30'
+                            ? 'bg-gray-700 text-gray-400 cursor-not-allowed' 
+                            : 'bg-gray-800 text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30'
                         }`}
                         aria-label="Page suivante"
                         title="Page suivante"
@@ -437,7 +437,7 @@ export default function AllProjects() {
           
           {/* Retour à l'accueil */}
           <div className="text-center mt-12">
-            <Link href="/" className="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium">
+            <Link href="/" className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
               </svg>

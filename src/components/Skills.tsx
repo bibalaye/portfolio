@@ -17,25 +17,63 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-20 relative overflow-hidden bg-gray-900">
+      {/* Fond animé amélioré */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="w-full h-full" style={{ background: 'radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.6) 100%)' }}></div>
+          </div>
+          <div className="absolute inset-0 opacity-40">
+            <motion.div 
+              className="absolute h-[600px] w-[600px] bg-indigo-500/20 rounded-full blur-[120px]"
+              animate={{
+                x: [0, 100, 0],
+                y: [0, 50, 0],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 25,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            />
+            <motion.div 
+              className="absolute right-0 bottom-0 h-[500px] w-[500px] bg-blue-500/20 rounded-full blur-[120px]"
+              animate={{
+                x: [0, -50, 0],
+                y: [0, -100, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Mes Compétences
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 mx-auto mb-6 rounded-full"></div>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-500 to-blue-500 mx-auto mb-6 rounded-full"></div>
+          <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Découvrez les technologies et outils que je maîtrise pour créer des solutions web innovantes et performantes.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-16">
           {SkillInfo.map((category, index) => (
             <motion.div
               key={category.title}
@@ -44,29 +82,31 @@ export default function Skills() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 group hover:shadow-xl transition-all duration-300"
+              className="glass-dark rounded-xl p-6 border border-indigo-500/30 group hover:border-indigo-400/50 transition-all duration-300 shadow-lg hover:shadow-indigo-500/10"
             >
               <button 
                 onClick={() => toggleCategory(category.title)}
-                className="w-full"
+                className="w-full focus:outline-none focus:ring-2 focus:ring-indigo-500/50 rounded-lg"
+                aria-expanded={expandedCategory === category.title}
+                aria-controls={`category-${category.title}`}
               >
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="flex-shrink-0">
-                    <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-indigo-100 dark:bg-indigo-900/30">
+                    <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-indigo-500/10 border border-indigo-500/30 group-hover:border-indigo-400/50 transition-colors duration-300">
                       <ImageWithFallback
                         src={`/icons/${category.title.toLowerCase().replace(/ /g, '-')}.png`}
                         alt={`${category.title} icon`}
                         width={48}
                         height={48}
-                        className="object-contain p-2"
+                        className="object-contain p-2 group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
                   </div>
                   <div className="flex-grow text-left">
-                    <h3 className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
                       {category.title}
                     </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                    <p className="text-sm text-gray-400">
                       {category.skills.length} compétences
                     </p>
                   </div>
@@ -77,7 +117,7 @@ export default function Skills() {
                   >
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
-                      className="h-6 w-6 text-gray-400 dark:text-gray-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300" 
+                      className="h-6 w-6 text-gray-400 group-hover:text-indigo-400 transition-colors duration-300" 
                       fill="none" 
                       viewBox="0 0 24 24" 
                       stroke="currentColor"
@@ -91,13 +131,14 @@ export default function Skills() {
               <AnimatePresence>
                 {expandedCategory === category.title && (
                   <motion.div
+                    id={`category-${category.title}`}
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="pt-4 border-t border-gray-100 dark:border-gray-700">
+                    <div className="pt-4 border-t border-indigo-500/30">
                       <div className="space-y-4">
                         {category.skills.map((skill, skillIndex) => (
                           <motion.div 
@@ -105,30 +146,30 @@ export default function Skills() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.3, delay: skillIndex * 0.1 }}
-                            className="relative bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-300"
+                            className="relative bg-indigo-500/5 rounded-lg p-3 hover:bg-indigo-500/10 transition-all duration-300 group/skill"
                           >
                             <div className="flex items-center space-x-3">
                               <div className="flex-shrink-0">
-                                <div className="relative w-8 h-8 rounded-md overflow-hidden bg-white dark:bg-gray-800">
+                                <div className="relative w-8 h-8 rounded-lg overflow-hidden bg-indigo-500/10 border border-indigo-500/30 group-hover/skill:border-indigo-400/50 transition-colors duration-300">
                                   <ImageWithFallback
                                     src={`/icons/${skill.toLowerCase().replace(/ /g, '-')}.png`}
                                     alt={`${skill} icon`}
                                     width={32}
                                     height={32}
-                                    className="object-contain p-1.5"
+                                    className="object-contain p-1.5 group-hover/skill:scale-110 transition-transform duration-300"
                                   />
                                 </div>
                               </div>
                               <div className="flex-grow">
                                 <div className="flex justify-between items-center mb-1">
-                                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{skill}</span>
+                                  <span className="text-sm font-medium text-gray-300 group-hover/skill:text-indigo-400 transition-colors duration-300">{skill}</span>
                                 </div>
-                                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                                <div className="w-full bg-gray-700/50 rounded-full h-1.5 overflow-hidden">
                                   <motion.div
                                     initial={{ width: 0 }}
                                     animate={{ width: '100%' }}
                                     transition={{ duration: 1, delay: skillIndex * 0.1 }}
-                                    className="bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 h-1.5 rounded-full"
+                                    className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-blue-500"
                                   />
                                 </div>
                               </div>
@@ -143,22 +184,6 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
-
-        {/* Note pour les icônes 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800/50 text-sm text-yellow-800 dark:text-yellow-200"
-        >
-          <p>
-            <span className="font-bold">Note:</span> Pour un affichage optimal, ajoutez des icônes PNG dans le dossier 
-            <code className="bg-yellow-100 dark:bg-yellow-900/50 px-1 py-0.5 rounded text-xs font-mono mx-1">/public/icons/</code>
-            pour chaque catégorie et compétence (exemple : <code className="bg-yellow-100 dark:bg-yellow-900/50 px-1 py-0.5 rounded text-xs font-mono">frontend.png</code>, <code className="bg-yellow-100 dark:bg-yellow-900/50 px-1 py-0.5 rounded text-xs font-mono">react.png</code>).
-          </p>
-        </motion.div>
-        */}
       </div>
     </section>
   );

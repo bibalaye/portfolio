@@ -71,12 +71,19 @@
   --radius-2xl: 1rem;
   --radius-3xl: 1.5rem;
   --radius-full: 9999px;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 249, 250, 251;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 17, 24, 39;
+    --background-end-rgb: 11, 15, 25;
   }
 }
 
@@ -142,5 +149,96 @@ html {
   ::selection {
     background-color: var(--primary-800);
     color: var(--primary-100);
+  }
+}
+
+/* Styles globaux personnalisés */
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-[rgb(var(--background-start-rgb))] to-[rgb(var(--background-end-rgb))] text-[rgb(var(--foreground-rgb))];
+  }
+}
+
+/* Animations personnalisées */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Effets de glassmorphisme */
+.glass {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20;
+}
+
+.glass-dark {
+  @apply bg-gray-900/90 backdrop-blur-lg border border-gray-700/50;
+}
+
+/* Effets de néon */
+.neon-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.neon-border {
+  @apply border-2 border-blue-500;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+              inset 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-500 dark:bg-indigo-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-indigo-600 dark:bg-indigo-500;
+}
+
+/* Transitions fluides */
+.smooth-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Effets de survol */
+.hover-lift {
+  @apply transition-transform duration-300 ease-in-out hover:-translate-y-1;
+}
+
+/* Effets de gradient animé */
+.animated-gradient {
+  background: linear-gradient(-45deg, #6366f1, #3b82f6, #8b5cf6, #6366f1);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

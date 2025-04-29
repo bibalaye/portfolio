@@ -10,96 +10,146 @@ export default function Projects() {
   const featuredProjects = ProjectInfo.slice(0, 4);
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 relative overflow-hidden bg-gray-900">
+      {/* Fond animé amélioré */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="w-full h-full" style={{ background: 'radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.6) 100%)' }}></div>
+          </div>
+          <div className="absolute inset-0 opacity-40">
+            <motion.div 
+              className="absolute h-[500px] w-[500px] bg-indigo-500/20 rounded-full blur-[120px]"
+              animate={{
+                x: [0, 100, 0],
+                y: [0, 50, 0],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 25,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            />
+            <motion.div 
+              className="absolute right-0 bottom-0 h-[400px] w-[400px] bg-blue-500/20 rounded-full blur-[120px]"
+              animate={{
+                x: [0, -50, 0],
+                y: [0, -100, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Mes Projets
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-300 mx-auto mb-6 rounded-full"></div>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-500 to-blue-500 mx-auto mb-6 rounded-full"></div>
+          <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Découvrez une sélection de mes projets les plus significatifs. Chaque projet est une opportunité d&apos;apprentissage et d&apos;innovation.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:mx-16">
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700 group"
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className="glass-dark rounded-xl overflow-hidden border border-indigo-500/30 group hover:border-indigo-400/50 transition-all duration-300 shadow-lg hover:shadow-indigo-500/10"
             >
-              <div className="relative h-56 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative h-64 overflow-hidden">
                 <ImageWithFallback
                   src={`/${project.image}`}
                   alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-4 right-4 z-20">
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                    className="bg-white/20 backdrop-blur-sm p-2 rounded-full"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </motion.div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Badge pour les projets en ligne */}
+                {project.live && (
+                  <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
+                    En ligne
+                  </div>
+                )}
               </div>
               
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 line-clamp-3">{project.desc}</p>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-indigo-400 transition-colors duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 mb-4 line-clamp-3">
+                  {project.desc}
+                </p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
-                    <motion.span 
-                      key={tech}
-                      whileHover={{ y: -2 }}
-                      whileTap={{ scale: 0.95 }} 
-                      className="px-3 py-1.5 text-xs font-medium bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/40 dark:to-blue-900/40 text-indigo-700 dark:text-indigo-300 rounded-full shadow-sm border border-indigo-100 dark:border-indigo-800 transition-all duration-300"
+                  {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                    <span 
+                      key={`${tech}-${techIndex}`} 
+                      className="px-2 py-1 text-xs font-medium bg-indigo-500/20 text-indigo-300 rounded-full border border-indigo-500/30"
                     >
                       {tech}
-                    </motion.span>
+                    </span>
                   ))}
+                  {project.technologies.length > 3 && (
+                    <span className="px-2 py-1 text-xs font-medium bg-gray-700/50 text-gray-300 rounded-full border border-gray-600/50">
+                      +{project.technologies.length - 3}
+                    </span>
+                  )}
                 </div>
                 
-                <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <div className="flex justify-between items-center mt-6 pt-6 border-t border-indigo-500/30">
+                  <motion.div 
+                    whileHover={{ scale: 1.05 }} 
+                    whileTap={{ scale: 0.95 }}
+                    className="flex-1 mr-4"
+                  >
                     <Link 
                       href={`/projet/${encodeURIComponent(project.title.toLowerCase().replace(/ /g, '-'))}`} 
-                      className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-700 hover:to-blue-600 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center"
+                      className="w-full px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/25 flex items-center justify-center group/link"
                     >
                       <span>Voir détails</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
                     </Link>
                   </motion.div>
                   
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <motion.div 
+                    whileHover={{ scale: 1.05 }} 
+                    whileTap={{ scale: 0.95 }}
+                    className="flex-1"
+                  >
                     <Link 
                       href={project.github} 
-                      className="px-4 py-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-indigo-600 hover:text-indigo-600 dark:hover:border-indigo-400 dark:hover:text-indigo-400 font-medium rounded-lg transition-all duration-300 flex items-center"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full px-6 py-3 bg-transparent border-2 border-indigo-500/50 hover:border-indigo-400 text-white hover:text-indigo-400 font-medium rounded-xl transition-all duration-300 flex items-center justify-center group/github"
                     >
                       <span>Code source</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover/github:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                       </svg>
                     </Link>
                   </motion.div>
@@ -110,24 +160,21 @@ export default function Projects() {
         </div>
 
         {/* Bouton pour voir tous les projets */}
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex justify-center mt-16"
+          className="text-center mt-12"
         >
-          <Link href="/projets">
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-700 hover:to-blue-600 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center"
-            >
-              <span className="text-lg">Voir tous les projets</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </motion.button>
+          <Link 
+            href="/projets" 
+            className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-indigo-500/50 hover:border-indigo-400 text-white hover:text-indigo-400 font-medium rounded-xl transition-all duration-300 group"
+          >
+            <span>Voir tous mes projets</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
           </Link>
         </motion.div>
       </div>

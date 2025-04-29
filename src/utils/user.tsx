@@ -3,6 +3,7 @@ const Info = {
     email: "sybibalaye@gmail.com",
     stack: ["Étudiant en Master MIAGE", "Développeur Full Stack", "Gestionnaire", "Passionné d'Informatique"],
     bio: "Bienvenue dans mon univers numérique ! 🚀 Je suis ABIBOULAYE SY, étudiant passionné en Master MIAGE à l'UGB, alliant expertise technique et compétences en gestion. Spécialisé dans la création de solutions innovantes et évolutives, je relève avec enthousiasme les défis du développement et de la gestion de projets. Toujours en quête de nouvelles opportunités, je suis prêt à mettre mes compétences au service de projets ambitieux. Explorez mon portfolio pour découvrir mes réalisations et n'hésitez pas à me contacter pour des opportunités d'emploi ou de stage. Ensemble, créons l'exceptionnel et façonnons l'avenir numérique ! 💼🚀",
+    bio2: " Je suis Abiboulaye Sy, un profil hybride alliant expertise technique en développement informatique et solides compétences en gestion des projets et des organisations. Issu de la formation MIAGE, je conçois des solutions numériques innovantes, évolutives et adaptées aux enjeux stratégiques des entreprises. Spécialisé dans les systèmes d’information et l’innovation technologique, je relève avec enthousiasme les défis du développement digital et de l’optimisation des processus métiers.",
     github: "https://github.com/bibalaye",
     linkedin: "https://linkedin.com/in/abiboulaye-sy",
     location: "Saint-Louis, Sénégal",
@@ -11,14 +12,117 @@ const Info = {
 
 const ProjectInfo = [
     {
+        title: "Plateforme Yonnu Tool",
+        desc: "🛒 Plateforme e-commerce avec commande simplifiée (Laravel & Next.js). J'ai développé une plateforme e-commerce moderne combinant Laravel (API backend) et Next.js (frontend), axée sur la fluidité d'achat et l'accessibilité pour tous types de clients. ✅ Fonctionnalités clés: Commande sans compte: les utilisateurs peuvent finaliser un achat sans créer de compte, en remplissant simplement leurs informations de livraison. Gestion complète du panier avec mise à jour dynamique des quantités, suppression de produits, et calcul automatique du total. API sécurisée construite avec Laravel, exposant des endpoints RESTful pour les produits, les utilisateurs, les commandes et le paiement. Expérience utilisateur réactive grâce à Next.js : aucune recharge de page, transitions fluides, validation côté client. Architecture modulaire et évolutive, intégrant les bonnes pratiques de séparation entre frontend et backend. Déploiement en production: Backend hébergé sur Laravel Cloud, frontend sur Vercel.",
+        image: "yonnutool.png",
+        images: ["yonnutool.png", "yonnutool1.png", "yonnutool2.png", "yonnutool3.png",],
+        live: true,
+        link: "https://frontend-five-woad-25.vercel.app/",
+        technologies: ["TypeScript", "Next_JS", "Node_JS", "MySQL", "Laravel"],
+        github: "https://github.com/bibalaye/Plateforme_Yonnutool"
+    },
+    {
         title: "Portfolio Next.js",
         desc: "Mon portfolio personnel développé avec Next.js, TailwindCSS et Framer Motion. Une vitrine moderne et interactive de mes compétences et réalisations, avec des animations fluides et une expérience utilisateur optimisée. Le site est entièrement responsive et utilise les dernières fonctionnalités de Next.js 13.",
         image: "portfolio.png",
-        images: ["portfolio.png", "portfolio2.png", "portfolio3.png"],
+        images: ["portfolio.png", "portfolio1.png", "portfolio2.png"],
         live: true,
         technologies: ["Next.js", "React", "TailwindCSS", "TypeScript", "Framer Motion"],
         link: "https://abiboulaye.dev",
         github: "https://github.com/bibalaye/portfolio"
+    },
+    {
+        title: "Resto Campus",
+        desc: "Application mobile complète pour la commande et le paiement des repas dans une cantine universitaire. Conçue avec Flutter et intégrant les services de paiement mobile Wave et Orange Money via l'API PayDunya, elle permet une gestion fluide des menus, commandes et transactions, tout en offrant une expérience utilisateur moderne et responsive avec Material Design 3.",
+        image: "restocampus.png",
+        images: ["restocampus.png", "restocampus1.png", "restocampus2.png", "restocampus3.png", "restocampus4.png", "restocampus5.png", "restocampus6.png", "restocampus7.png","restocampus8.png"],
+        live: false,
+        technologies: ["Flutter", "Dart", "Material Design 3", "PayDunya API", "Wave", "Orange Money"],
+        link: "https://appdistribution.firebase.dev/i/5531e034bd2b8709",
+        github: "https://github.com/bibalaye/resto_campus"
+    },
+    {
+        title: "Boutique E-commerce Laravel",
+        desc: "Une plateforme de e-commerce moderne et entièrement responsive construite avec Laravel, Bootstrap, et jQuery. Elle offre une expérience de shopping fluide sur tous les appareils avec des fonctionnalités telles que l'authentification sécurisée des utilisateurs, la gestion des paniers et la validation des formulaires pour les informations de paiement et d'adresse. Les utilisateurs peuvent ajouter des articles à leur liste de souhaits, les rechercher et les acheter facilement.",
+        image: "laravel.png",
+        images: ["laravel.png", "laravel2.png", "laravel3.png"],
+        live: false,
+        technologies: ["Laravel", "Bootstrap", "jQuery", "MySQL", "PHP"],
+        github: "https://github.com/bibalaye/site_ecommerce_laravel"
+    },
+    {
+        title: "E-commerce Django",
+        desc: "Un projet e-commerce complet développé avec Django, offrant une expérience d'achat en ligne complète. Les fonctionnalités incluent la sélection de produits, la gestion des paniers, le traitement des commandes et un système d'administration robuste. Le projet met en valeur mes compétences en développement backend avec Django et en création d'interfaces utilisateur dynamiques.",
+        image: "django.png",
+        images: ["django.png", "django1.png", "django2.png", "django3.png", "django4.png", "django5.png", "django6.png", "django7.png", "django8.png"],
+        live: false,
+        technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "PostgreSQL"],
+        github: "https://github.com/bibalaye/ecommerce_django"
+    },
+    {
+        title: "Clone Facebook Login",
+        desc: "Une réplique fidèle de la page de connexion de Facebook utilisant HTML, CSS, et JavaScript. Ce projet met en avant mes compétences en développement front-end en créant une interface utilisateur identique à l'originale, avec une attention particulière aux détails et à la réactivité. Le projet inclut également la validation des formulaires côté client.",
+        image: "facebook.png",
+        images: ["facebook.png"],
+        live: true,
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://bibalaye.github.io/facebook_odl_connexion_page_clone",
+        github: "https://github.com/bibalaye/facebook_odl_connexion_page_clone"
+    },
+    {
+        title: "Gestion Transport Drones",
+        desc: "Application de gestion logistique pour le transport par drones développée avec APEX-Oracle. Le système permet de gérer les itinéraires, suivre les livraisons en temps réel et optimiser les trajets. L'interface administrateur offre des tableaux de bord détaillés et des rapports d'analyse.",
+        image: "drone.png",
+        images: ["drone.png", "drone1.png", "drone2.png", "drone3.png"],
+        live: false,
+        technologies: ["APEX-Oracle", "PL/SQL", "JavaScript", "HTML", "CSS"],
+        github: "https://github.com/bibalaye/drone-transport"
+    },
+    {
+        title: "Vente de Pixels",
+        desc: "Un projet innovant inspiré du 'Million Dollar Homepage', permettant aux utilisateurs d'acheter et personnaliser des pixels sur une page web. Les acheteurs peuvent choisir des couleurs ou télécharger des images pour leurs pixels. Le projet utilise React pour le front-end et Node.js pour le back-end, avec une base de données MySQL pour la persistance des données.",
+        image: "pixel.png",
+        images: ["pixel.png", "pixel1.png", "pixel2.png", "pixel3.png", "pixel4.png", "pixel5.png"],
+        live: false,
+        technologies: ["React", "Node.js", "MySQL", "Canvas API", "Express.js"],
+        github: "https://github.com/bibalaye/vente_pixel"
+    },
+    {
+        title: "Clone WhatsApp",
+        desc: "Une application de messagerie instantanée inspirée de WhatsApp, développée en PHP. Les utilisateurs peuvent créer des comptes, ajouter des contacts et échanger des messages en temps réel. Le projet inclut également des fonctionnalités de statut en ligne, de confirmation de lecture et de partage de médias.",
+        image: "message.png",
+        images: ["message.png", "message1.png", "message2.png", "message3.png", "message4.png", "message5.png"],
+        live: false,
+        technologies: ["PHP", "MySQL", "WebSocket", "HTML", "CSS", "JavaScript"],
+        github: "https://github.com/bibalaye/messagerie_php"
+    },
+    {
+        title: "API TikTok",
+        desc: "Un projet d'intégration de l'API TikTok permettant de récupérer et afficher les informations des profils utilisateurs. L'application web permet aux utilisateurs de rechercher des comptes TikTok et d'afficher leurs statistiques, vidéos populaires et autres informations publiques.",
+        image: "tiktok.png",
+        images: ["tiktok.png", "tiktok1.png", "tiktok2.png", "tiktok3.png"],
+        live: false,
+        technologies: ["PHP", "API TikTok", "HTML", "CSS", "JavaScript"],
+        github: "https://github.com/bibalaye/tiktok_api_test"
+    },
+    {
+        title: "Gestion CROUS",
+        desc: "Une application web complète pour la gestion des chambres étudiantes du CROUS. Le système permet l'attribution des chambres, la gestion des paiements, le suivi des maintenances et la communication avec les résidents. Développée avec Laravel et Tailwind CSS, l'application offre une interface moderne et intuitive.",
+        image: "crous.png",
+        images: ["crous.png", "crous1.png", "crous2.png", "crous3.png", "crous4.png", "crous5.png", "crous6.png", "crous7.png"],
+        live: false,
+        technologies: ["Laravel", "MySQL", "Tailwind CSS", "PHP", "JavaScript", "Alpine.js"],
+        github: "https://github.com/bibalaye/Crous_gestion_chambre"
+    },
+    {
+        title: "Clone Portail UGB",
+        desc: "Une reproduction du portail officiel de l'Université Gaston Berger, construite avec Bootstrap, HTML, et CSS. Ce projet démontre ma capacité à créer des interfaces web professionnelles et responsives, en respectant l'identité visuelle existante tout en optimisant l'expérience utilisateur.",
+        image: "portail.png",
+        images: ["portail.png", "portail1.png", "portail2.png", "portail3.png"],
+        live: true,
+        technologies: ["Bootstrap", "HTML", "CSS", "JavaScript"],
+        link: "https://bibalaye.github.io/portail_ugb_clone",
+        github: "https://github.com/bibalaye/portail_ugb_clone"
     },
     {
         title: "Gestionnaire de Projets",
@@ -75,45 +179,6 @@ const ProjectInfo = [
         technologies: ["HTML", "CSS", "JavaScript", "LocalStorage", "Responsive Design"],
         github: "https://github.com/bibalaye/quiz"
     },
-    
-    {
-        title: "Plateforme Yonnu Tool",
-        desc: "Version améliorée de la plateforme de gestion d'outils, développée avec TypeScript et React. Cette application offre une interface moderne et des fonctionnalités avancées pour la gestion des ressources et des équipements.",
-        image: "yonnutool.png",
-        images: ["yonnutool.png", "yonnutool1.png", "yonnutool2.png"],
-        live: false,
-        technologies: ["TypeScript", "React", "Node.js", "MongoDB", "Express"],
-        github: "https://github.com/bibalaye/Plateforme_Yonnutool"
-    },
-    
-    {
-        title: "Boutique E-commerce Laravel",
-        desc: "Une plateforme de e-commerce moderne et entièrement responsive construite avec Laravel, Bootstrap, et jQuery. Elle offre une expérience de shopping fluide sur tous les appareils avec des fonctionnalités telles que l'authentification sécurisée des utilisateurs, la gestion des paniers et la validation des formulaires pour les informations de paiement et d'adresse. Les utilisateurs peuvent ajouter des articles à leur liste de souhaits, les rechercher et les acheter facilement.",
-        image: "laravel.png",
-        images: ["laravel.png", "laravel2.png", "laravel3.png"],
-        live: false,
-        technologies: ["Laravel", "Bootstrap", "jQuery", "MySQL", "PHP"],
-        github: "https://github.com/bibalaye/site_ecommerce_laravel"
-    },
-    {
-        title: "E-commerce Django",
-        desc: "Un projet e-commerce complet développé avec Django, offrant une expérience d'achat en ligne complète. Les fonctionnalités incluent la sélection de produits, la gestion des paniers, le traitement des commandes et un système d'administration robuste. Le projet met en valeur mes compétences en développement backend avec Django et en création d'interfaces utilisateur dynamiques.",
-        image: "django.png",
-        images: ["django.png", "django1.png", "django2.png", "django3.png", "django4.png", "django5.png", "django6.png", "django7.png", "django8.png"],
-        live: false,
-        technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "PostgreSQL"],
-        github: "https://github.com/bibalaye/ecommerce_django"
-    },
-    {
-        title: "Clone Facebook Login",
-        desc: "Une réplique fidèle de la page de connexion de Facebook utilisant HTML, CSS, et JavaScript. Ce projet met en avant mes compétences en développement front-end en créant une interface utilisateur identique à l'originale, avec une attention particulière aux détails et à la réactivité. Le projet inclut également la validation des formulaires côté client.",
-        image: "facebook.png",
-        images: ["facebook.png"],
-        live: true,
-        technologies: ["HTML", "CSS", "JavaScript"],
-        link: "https://bibalaye.github.io/facebook_odl_connexion_page_clone",
-        github: "https://github.com/bibalaye/facebook_odl_connexion_page_clone"
-    },
     {
         title: "Tirage Ligue des Champions",
         desc: "Une application web simulant le tirage au sort de la Ligue des Champions de l'UEFA. Développée avec JavaScript, elle respecte toutes les règles officielles du tirage et offre une visualisation interactive des résultats.",
@@ -132,95 +197,41 @@ const ProjectInfo = [
         live: false,
         technologies: ["Python", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"],
         github: "https://github.com/bibalaye/credit-scoring-ml"
-    },
-    {
-        title: "Clone Portail UGB",
-        desc: "Une reproduction du portail officiel de l'Université Gaston Berger, construite avec Bootstrap, HTML, et CSS. Ce projet démontre ma capacité à créer des interfaces web professionnelles et responsives, en respectant l'identité visuelle existante tout en optimisant l'expérience utilisateur.",
-        image: "portail.png",
-        images: ["portail.png", "portail1.png", "portail2.png", "portail3.png"],
-        live: true,
-        technologies: ["Bootstrap", "HTML", "CSS", "JavaScript"],
-        link: "https://bibalaye.github.io/portail_ugb_clone",
-        github: "https://github.com/bibalaye/portail_ugb_clone"
-    },
-    {
-        title: "Gestion Transport Drones",
-        desc: "Application de gestion logistique pour le transport par drones développée avec APEX-Oracle. Le système permet de gérer les itinéraires, suivre les livraisons en temps réel et optimiser les trajets. L'interface administrateur offre des tableaux de bord détaillés et des rapports d'analyse.",
-        image: "drone.png",
-        images: ["drone.png", "drone1.png", "drone2.png", "drone3.png"],
-        live: false,
-        technologies: ["APEX-Oracle", "PL/SQL", "JavaScript", "HTML", "CSS"],
-        github: "https://github.com/bibalaye/drone-transport"
-    },
-    {
-        title: "Vente de Pixels",
-        desc: "Un projet innovant inspiré du 'Million Dollar Homepage', permettant aux utilisateurs d'acheter et personnaliser des pixels sur une page web. Les acheteurs peuvent choisir des couleurs ou télécharger des images pour leurs pixels. Le projet utilise React pour le front-end et Node.js pour le back-end, avec une base de données MySQL pour la persistance des données.",
-        image: "pixel.png",
-        images: ["pixel.png", "pixel1.png", "pixel2.png", "pixel3.png", "pixel4.png", "pixel5.png"],
-        live: false,
-        technologies: ["React", "Node.js", "MySQL", "Canvas API", "Express.js"],
-        github: "https://github.com/bibalaye/vente_pixel"
-    },
-    {
-        title: "Clone WhatsApp",
-        desc: "Une application de messagerie instantanée inspirée de WhatsApp, développée en PHP. Les utilisateurs peuvent créer des comptes, ajouter des contacts et échanger des messages en temps réel. Le projet inclut également des fonctionnalités de statut en ligne, de confirmation de lecture et de partage de médias.",
-        image: "message.png",
-        images: ["message.png", "message1.png", "message2.png", "message3.png", "message4.png", "message5.png"],
-        live: false,
-        technologies: ["PHP", "MySQL", "WebSocket", "HTML", "CSS", "JavaScript"],
-        github: "https://github.com/bibalaye/messagerie_php"
-    },
-    {
-        title: "API TikTok",
-        desc: "Un projet d'intégration de l'API TikTok permettant de récupérer et afficher les informations des profils utilisateurs. L'application web permet aux utilisateurs de rechercher des comptes TikTok et d'afficher leurs statistiques, vidéos populaires et autres informations publiques.",
-        image: "tiktok.png",
-        images: ["tiktok.png", "tiktok1.png", "tiktok2.png", "tiktok3.png"],
-        live: false,
-        technologies: ["PHP", "API TikTok", "HTML", "CSS", "JavaScript"],
-        github: "https://github.com/bibalaye/tiktok_api_test"
-    },
-    {
-        title: "Gestion CROUS",
-        desc: "Une application web complète pour la gestion des chambres étudiantes du CROUS. Le système permet l'attribution des chambres, la gestion des paiements, le suivi des maintenances et la communication avec les résidents. Développée avec Laravel et Tailwind CSS, l'application offre une interface moderne et intuitive.",
-        image: "crous.png",
-        images: ["crous.png", "crous1.png", "crous2.png", "crous3.png", "crous4.png", "crous5.png", "crous6.png", "crous7.png"],
-        live: false,
-        technologies: ["Laravel", "MySQL", "Tailwind CSS", "PHP", "JavaScript", "Alpine.js"],
-        github: "https://github.com/bibalaye/Crous_gestion_chambre"
     }
+   
 ]
 
 const SkillInfo = [
     {
         title: "Frontend",
-        skills: ["React", "Next.js", "Vue.js", "Angular", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "SASS", "Material UI"]
+        skills: ["React_JS", "Next_JS", "Vue.js", "Angular", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind_CSS", "Bootstrap", "SASS", "Material_UI"]
     },
     {
         title: "Backend",
-        skills: ["Node.js", "Express.js", "Laravel", "Django", "Spring Boot", "FastAPI", "RESTful APIs", "GraphQL"]
+        skills: ["Node_JS", "Express_JS", "Laravel", "Django", "Spring_Boot", "FastAPI", "RESTful_APIs", "GraphQL"]
     },
     {
-        title: "Bases de données",
-        skills: ["MySQL", "PostgreSQL", "MongoDB", "Oracle", "SQL Server", "Firebase", "Redis"]
+        title: "Bases_de_donnees",
+        skills: ["MySQL", "PostgreSQL", "MongoDB", "Oracle", "SQL_Server", "Firebase", "Redis"]
     },
     {
-        title: "DevOps & Cloud",
-        skills: ["Docker", "AWS", "Azure", "Google Cloud", "Netlify", "Vercel", "CI/CD", "Git Actions"]
+        title: "DevOps_Cloud",
+        skills: ["Docker", "AWS", "Azure", "Google_Cloud", "Netlify", "Vercel", "CI_CD", "Git_Actions"]
     },
     {
-        title: "Langages de programmation",
+        title: "Langages_de_programmation",
         skills: ["JavaScript", "TypeScript", "Python", "Java", "PHP", "C++", "C", "Pascal"]
     },
     {
-        title: "Outils & Environnements",
-        skills: ["Git", "GitHub", "VS Code", "IntelliJ IDEA", "PyCharm", "Eclipse", "Android Studio", "Postman", "MongoDB Compass", "Docker Desktop", "Laragon", "XAMPP"]
+        title: "Outils_Environnements",
+        skills: ["Git", "GitHub", "VS_Code", "IntelliJ_IDEA", "PyCharm", "Eclipse", "Android_Studio", "Postman", "MongoDB_Compass", "Docker_Desktop", "Laragon", "XAMPP"]
     },
     {
-        title: "Tests & Qualité",
+        title: "Tests_Qualite",
         skills: ["Jest", "Cypress", "JUnit", "PHPUnit", "ESLint", "Prettier", "SonarQube"]
     },
     {
-        title: "Méthodologies & Gestion",
+        title: "Methodologies_Gestion",
         skills: ["Agile", "Scrum", "Kanban", "Trello", "Notion", "Jira", "UML", "Merise"]
     }
 ]
