@@ -61,7 +61,7 @@ export default function Hero() {
                 {Info.stack[1]}
               </motion.span>
               <motion.span 
-                className="neon-text animated-gradient"
+                className="neon-text"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
