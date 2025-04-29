@@ -94,7 +94,7 @@ export default function Skills() {
                   <div className="flex-shrink-0">
                     <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-indigo-500/10 border border-indigo-500/30 group-hover:border-indigo-400/50 transition-colors duration-300">
                       <ImageWithFallback
-                        src={`/Icons/${category.title.toLowerCase().replace(/ /g, '-')}.png`}
+                        src={`/Icons/${category.title.replace(/ /g, '_')}.png`}
                         alt={`${category.title} icon`}
                         width={48}
                         height={48}
@@ -152,7 +152,7 @@ export default function Skills() {
                               <div className="flex-shrink-0">
                                 <div className="relative w-8 h-8 rounded-lg overflow-hidden bg-indigo-500/10 border border-indigo-500/30 group-hover/skill:border-indigo-400/50 transition-colors duration-300">
                                   <ImageWithFallback
-                                    src={`/Icons/${skill.toLowerCase().replace(/ /g, '-')}.png`}
+                                    src={`/Icons/${skill.replace(/ /g, '_')}.png`}
                                     alt={`${skill} icon`}
                                     width={32}
                                     height={32}
