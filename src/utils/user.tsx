@@ -66,7 +66,7 @@ const ProjectInfo = [
         images: ["facebook.png"],
         live: true,
         technologies: ["HTML", "CSS", "JavaScript"],
-        link: "https://bibalaye.github.io/facebook_odl_connexion_page_clone",
+        link: "https://facebook-odl-connexion-page-clone.onrender.com/clone_fb.html",
         github: "https://github.com/bibalaye/facebook_odl_connexion_page_clone"
     },
     {
@@ -121,7 +121,7 @@ const ProjectInfo = [
         images: ["portail.png", "portail1.png", "portail2.png", "portail3.png"],
         live: true,
         technologies: ["Bootstrap", "HTML", "CSS", "JavaScript"],
-        link: "https://bibalaye.github.io/portail_ugb_clone",
+        link: "https://portail-ugb-clone.onrender.com/",
         github: "https://github.com/bibalaye/portail_ugb_clone"
     },
     {
