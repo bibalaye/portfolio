@@ -166,7 +166,7 @@ const ProjectInfo = [
         image: "bodyguard.png",
         images: ["bodyguard.png", "bodyguard1.png", "bodyguard2.png"],
         live: true,
-        link:"bodyguard-lime.vercel.app",
+        link:"https://bodyguard-lime.vercel.app",
         technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "Express"],
         github: "https://github.com/bibalaye/bodyguard"
     },
