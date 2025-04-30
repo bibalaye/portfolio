@@ -165,7 +165,8 @@ const ProjectInfo = [
         desc: "Un site web statique pour une entreprise de nettoyage et gardiennage, présentant ses services professionnels. Cette vitrine élégante met en valeur les différentes prestations offertes, les équipes qualifiées et permet aux clients potentiels de découvrir l'expertise de l'entreprise dans les domaines du nettoyage et de la sécurité.",
         image: "bodyguard.png",
         images: ["bodyguard.png", "bodyguard1.png", "bodyguard2.png"],
-        live: false,
+        live: true,
+        link:"bodyguard-lime.vercel.app",
         technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "Express"],
         github: "https://github.com/bibalaye/bodyguard"
     },
