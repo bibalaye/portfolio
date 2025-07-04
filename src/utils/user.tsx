@@ -42,6 +42,15 @@ const ProjectInfo = [
         github: "https://github.com/bibalaye/resto_campus"
     },
     {
+        title: "Interface Wave Mobile Sénégal",
+        desc: "Une reproduction fidèle et responsive de l’interface de l’application Wave Mobile Money, conçue avec React Native. Ce projet met en avant des animations fluides, une navigation intuitive, un header dynamique, ainsi que des composants réutilisables tels que les boutons d'action, les cartes QR et les éléments de transactions. Il s'agit d'un excellent exercice de design mobile et de maîtrise de l'UX inspiré d'une application populaire en Afrique de l'Ouest.",
+        image: "wave-mobile.png",
+        images: ["wave-mobile.png", "wave-mobile2.png", "wave-mobile.mp4"],
+        live: false,
+        technologies: ["React Native", "Animated API", "Vector Icons", "Expo", "JavaScript"],
+        github: "https://github.com/bibalaye/wave_clone"
+    },
+    {
         title: "Boutique E-commerce Laravel",
         desc: "Une plateforme de e-commerce moderne et entièrement responsive construite avec Laravel, Bootstrap, et jQuery. Elle offre une expérience de shopping fluide sur tous les appareils avec des fonctionnalités telles que l'authentification sécurisée des utilisateurs, la gestion des paniers et la validation des formulaires pour les informations de paiement et d'adresse. Les utilisateurs peuvent ajouter des articles à leur liste de souhaits, les rechercher et les acheter facilement.",
         image: "laravel.png",

@@ -9,6 +9,8 @@ import Navbar from '../../../components/Navbar';
 import { ProjectType } from '../../../types';
 import ImageWithFallback from '../../../components/ImageWithFallback';
 
+const isVideo = (filename: string) => filename.toLowerCase().endsWith('.mp4');
+
 export default function ProjectDetails() {
   const params = useParams();
   const router = useRouter();
@@ -200,14 +202,25 @@ export default function ProjectDetails() {
                   transition={{ duration: 0.3 }}
                   className="w-full h-full flex items-center justify-center"
                 >
-                  <ImageWithFallback 
-                    src={`/${project.images[currentImageIndex]}`} 
-                    alt={`${project.title} - Image ${currentImageIndex + 1}`} 
-                    fill
-                    sizes="100vw"
-                    priority
-                    className="object-contain"
-                  />
+                  {isVideo(project.images[currentImageIndex]) ? (
+                    <video
+                      src={`/${project.images[currentImageIndex]}`}
+                      controls
+                      autoPlay
+                      loop
+                      className="object-contain w-full h-full max-h-[90vh] rounded-xl"
+                      style={{ background: "#000" }}
+                    />
+                  ) : (
+                    <ImageWithFallback 
+                      src={`/${project.images[currentImageIndex]}`} 
+                      alt={`${project.title} - Image ${currentImageIndex + 1}`} 
+                      fill
+                      sizes="100vw"
+                      priority
+                      className="object-contain"
+                    />
+                  )}
                 </motion.div>
               </AnimatePresence>
               
@@ -437,13 +450,25 @@ export default function ProjectDetails() {
                           toggleFullscreen();
                         }}
                       >
-                        <ImageWithFallback
-                          src={`/${image}`}
-                          alt={`${project.title} - Image ${index + 1}`}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
+                        {isVideo(image) ? (
+                          <video
+                            src={`/${image}`}
+                            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                            style={{ borderRadius: "inherit", background: "#000" }}
+                            controls
+                            muted
+                            loop
+                            playsInline
+                          />
+                        ) : (
+                          <ImageWithFallback
+                            src={`/${image}`}
+                            alt={`${project.title} - Image ${index + 1}`}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <div className="bg-black/50 backdrop-blur-sm p-3 rounded-full">
