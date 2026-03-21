@@ -1,116 +1,83 @@
-# 🚀 3D Developer Portfolio
+# 🚀 Portfolio de Abiboulaye Sy
 
-A modern, animated 3D developer portfolio built with React, Three.js, TailwindCSS, and motion effects — designed to help you stand out and showcase your skills creatively.
+Bienvenue dans mon univers numérique ! Je suis **Abiboulaye Sy**, un Ingénieur Full Stack & DevOps passionné, diplômé d'un **Master MIAGE** à l'Université Gaston Berger (UGB). Mon expertise se situe à l'intersection du développement logiciel avancé, de l'infrastructure cloud et de la gestion stratégique.
 
-![3d Portfolio Screenshot GitHub](https://github.com/user-attachments/assets/9b0ed20e-074e-4f2a-81d8-20c9da751e9e)
-
----
-
-## 📚 Table of Contents
-
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Assets](#-assets)
-- [Contact Me](#-contact-me)
-- [Suggestions or Feedback](#-suggestions-or-feedback)
-- [Like This Project?](#-like-this-project)
+![Abiboulaye Sy Photo](public/assets/projects/abibou.jpg) *(Note: Utilisez un chemin relatif correct si nécessaire)*
 
 ---
 
-## ✨ Features
+## 👨‍💻 À propos de moi
 
-- 🔥 3D visuals powered by **React Three Fiber** and **Drei**
-- ⚡ Smooth transitions and scroll-based animations using **Framer Motion**
-- 🎨 Clean, responsive UI with **TailwindCSS**
-- 💌 Working contact form using **EmailJS**
-- 🧱 Beautiful UI enhancements with **Aceternity UI** and **Magic UI**
-- 🚀 Lightning-fast development with **Vite**
+Diplômé en **Méthodes Informatiques Appliquées à la Gestion des Entreprises (MIAGE)**, je combine une expertise technique de haut niveau avec de solides compétences en gestion. Je conçois et déploie des systèmes numériques performants, évolutifs et sécurisés.
 
----
-
-## 🛠 Tech Stack
-
-| Tech              | Description                           |
-|-------------------|---------------------------------------|
-| React             | Front-end JavaScript library          |
-| Vite              | Fast bundler and dev environment      |
-| TailwindCSS       | Utility-first CSS framework           |
-| React Three Fiber | 3D rendering with Three.js in React   |
-| Drei              | Helpers and abstractions for R3F      |
-| Framer Motion     | Animation library for React           |
-| EmailJS           | Form handling and email integration   |
-| Aceternity UI     | Custom UI components                  |
-| Magic UI          | Prebuilt UI elements and design extras|
+- 🌍 Basé à : Saint-Louis, Sénégal
+- 🎓 Formation : Master MIAGE (UGB)
+- 💼 Rôles actuels : Ingénieur Full Stack & DevOps, Architecte Cloud, Data Scientist.
 
 ---
 
-## 📁 Project Structure
+## 🛠 Compétences Techniques
 
-```bash
-├── public/
-│   ├── assets/             # Images, textures, models
-│   ├── models/             # 3D Astronaut model
-│   └── vite.svg
-├── src/
-│   ├── components/         # Reusable components
-│   ├── constants/          # Reusable datas
-│   ├── sections/           # Portfolio sections (Hero, About, etc.)
-│   ├── App.jsx             # Main app file
-│   ├── index.css           # Tailwind css
-│   └── main.jsx            # Entry point
-├── tailwind.config.js
-└── vite.config.js
-```
+### Frontend
+- **Frameworks** : React.js, Next.js, Vue.js, Angular
+- **Langages** : TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Bootstrap
 
----
+### Backend
+- **Frameworks** : Node.js (Express), Laravel (PHP), Django (Python), Spring Boot (Java), FastAPI
+- **Architecture** : Microservices, APIs RESTful
 
-## 🚀 Getting Started
-1. Clone the Repository
-```bash
-git clone https://github.com/Ali-Sanati/Portfolio.git
-cd Portfolio
-```
-2. Install Dependencies
-```bash
-npm install
-```
-3. Run the Development Server
-```bash
-npm run dev
-```
-The app will be available at http://localhost:5173.
+### Bases de Données
+- **Relationnelles** : MySQL, PostgreSQL, Oracle
+- **NoSQL** : MongoDB, Firebase
+
+### DevOps & Cloud
+- **Containers** : Docker, Kubernetes
+- **CI/CD** : GitLab CI, GitHub Actions
+- **Cloud** : AWS, Azure
+- **Infrastructure** : Linux, Nginx, Négociations d'infrastructures
+
+### Langages & Autres
+- Python, Java, PHP, C++, SQL, Git
 
 ---
 
-## 🔗 Assets
-Assets used in the project can be found [here](https://github.com/user-attachments/files/19820923/public.zip)
+## 📂 Projets Phares
+
+### [Système de Gestion du CROUS](https://github.com/bibalaye)
+Application de gestion complète pour le CROUS universitaire, optimisant les processus administratifs pour plus de 10 000 étudiants.
+- **Tech Stack** : Django, PostgreSQL, Python, Docker.
+- **Impact** : Réduction de 60% du temps de traitement des dossiers.
+
+### [Plateforme Yonnu Tool](https://github.com/bibalaye/ProjetFinal-laravel)
+E-commerce B2B simplifiant la chaîne d'approvisionnement avec un système de commande sans compte.
+- **Tech Stack** : Laravel API, Next.js, MySQL, Docker.
+- **Impact** : Augmentation de 40% du taux de conversion.
+
+### [RestoCampus](https://github.com/bibalaye)
+Solution digitale de gestion pour restaurants universitaires avec paiement QR-code.
+- **Tech Stack** : React, Node.js, MongoDB, Socket.io.
+- **Impact** : Réduction des files d'attente de 70%.
 
 ---
 
-## 📬 Contact Me
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/ali.sanatidev/reels/) 
-[![Static Badge](https://img.shields.io/badge/Youtube-%23FF0033?style=flat&logo=youtube)](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-sanati/) 
+## 💼 Expériences Récentes
+
+- **BeyeTech** (Nov 2025 - Fév 2026) : Développeur Logiciel & DevOps.
+- **Edacy** (Juil 2025 - Oct 2025) : Formation Ingénieur Full Stack intensive avec réalisations d'Hackathons.
+- **Freelance & Indépendant** (2020 - Présent) : Data Scientist et Développeur Full Stack sur divers projets e-commerce et gestion.
+- **Challenge Hub** (2024 - 2025) : Stagiaire Développeur Full Stack.
 
 ---
 
-## 💡 Suggestions or Feedback?
-Leave a comment on the [YouTube video](https://youtu.be/S9UQItTpwUQ) or open an issue here on GitHub.<br/>
-👉 What should I build next?
+## 📬 Me contacter
 
-- A beautiful Landing Page
+N'hésitez pas à me contacter pour discuter de projets innovants ou d'opportunités de collaboration !
 
-- A complete E-commerce site
-
-- A fun App Clone (YouTube, Netflix, etc.)
-
-Or another interactive Portfolio
-
-Let me know!
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/abiboulaye-sy)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/bibalaye)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-%2325D366.svg?logo=whatsapp&logoColor=white)](https://wa.me/221778649872)
+[![Gmail](https://img.shields.io/badge/Gmail-%23D14836.svg?logo=gmail&logoColor=white)](mailto:sybibalaye@gmail.com)
 
 ---
 
-## ⭐ Like This Project?
-Star the repo and [subscribe](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA??sub_confirmation=1) to the YouTube channel for more dev content!
+> Propulsé par la passion de l'innovation et l'excellence technique. ✨
